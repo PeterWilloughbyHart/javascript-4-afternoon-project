@@ -78,22 +78,22 @@ class Manager extends Employee {
 ////////// PROBLEM 3 //////////
 
 /*
-  Managers for Widget Co. get promoted when they get more employees, and get a bonus when they fire employees.
-  create a class ProgressiveManager that extends Manager.  A Progressive Manager has all of the same properties as a manager with the following additional properties:
-    - title - default 'Not a manager'
-    - bonus - default 0
+Managers for Widget Co. get promoted when they get more employees, and get a bonus when they fire employees.
+create a class ProgressiveManager that extends Manager.  A Progressive Manager has all of the same properties as a manager with the following additional properties:
+- title - default 'Not a manager'
+- bonus - default 0
 
-  When employees are hired or fired, the manager's title should be updated based on the number of reports.
-    0 reports : Not a manager
-    1-3 reports : Barely Manager
-    4-10 reports : Mostly Manager
-    11-50 reports : Manager
-    51-100 reports : Manager Plus
-    101+ reports : Bestest Manager
+When employees are hired or fired, the manager's title should be updated based on the number of reports.
+0 reports : Not a manager
+1-3 reports : Barely Manager
+4-10 reports : Mostly Manager
+11-50 reports : Manager
+51-100 reports : Manager Plus
+101+ reports : Bestest Manager
 
-  Everytime they fire an employee they get $100 added to their bonus.
+Everytime they fire an employee they get $100 added to their bonus.
 
-  Call your new class ProgressiveManager
+Call your new class ProgressiveManager
 */
 
 class ProgressiveManager extends Manager {
@@ -126,7 +126,7 @@ class ProgressiveManager extends Manager {
   }
   fire(fired) {
     super.fire(fired)
-    
+    this.bonus += 100;
   }
 }
 
@@ -135,8 +135,8 @@ class ProgressiveManager extends Manager {
 ////////// PROBLEM 4 - Black Diamond //////////
 
 /*
-  Widget Co has a factory that makes widgets.
-  Factories have Machines.
+Widget Co has a factory that makes widgets.
+Factories have Machines.
 
   Make a Machine class that takes in no parameters
   A Machine has the following properties:
